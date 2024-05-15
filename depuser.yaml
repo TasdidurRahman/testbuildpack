@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker-user
+spec:
+  selector:
+    matchLabels:
+      name: docker-user
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: docker-user
+    spec:
+      containers:
+        - image: subrata626/docker-user-service-envoy
+          name:  docker-user
+          ports:
+            - containerPort: 8080
+              name: docker-user
