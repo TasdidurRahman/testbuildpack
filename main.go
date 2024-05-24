@@ -6,7 +6,7 @@ import (
 )
 
 func user(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprintf(w, "USER Updated test buildpack with push update agian and again test auto hijibiji arnob\n")
+	fmt.Fprintf(w, "change  1 \n")
 }
 
 func main() {
